@@ -1,1 +1,8 @@
+dist
+
+# Dependency directories
 node_modules
+
+# parcel-bundler cache (https://parceljs.org/)
+.parcel-cache
+
