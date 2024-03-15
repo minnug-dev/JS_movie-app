@@ -43,11 +43,13 @@ function routeRender(routes) {
   history.replaceState(query, '')
 
   // 2) 현재 라우트 정보를 찾아서 렌더링
-  const currentRoute = routes.find(route => new RegExp(`${route.path}/?$`).test(hash))
+  const currentRoute = routes
+    .find(route => new RegExp(`${route.path}/?$`)
+    .test(hash))
   routerView.innerHTML = ''
   routerView.append(new currentRoute.component().el)
   
-  // 화면 출력 후 스크롤 위치 복구(스크롤 상단으로 위치)
+  // 3) 화면 출력 후 스크롤 위치 복구(스크롤 상단으로 위치)
   window.scrollTo(0, 0)
 }
 
