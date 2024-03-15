@@ -12,10 +12,10 @@ html {
   --color-area: #1c212e;
 }
 body {
-  background-color: var(--color-black);
   font-family: "Roboto", sans-serif;
   line-height: 1.4;
   color: var(--color-white);
+  background-color: var(--color-black);
 }
 .container {
   max-width: 1120px;
@@ -25,26 +25,26 @@ body {
 .btn {
   height: 50px;
   padding: 0 20px;
-  border: none;
-  border-radius: 4px;
-  outline: none;
   font-size: 14px;
   font-weight: 700;
   color: var(--color-white);
-  background-color: var(--color-area);
+  border-radius: 4px;
+  border: none;
   cursor: pointer;
+  outline: none;
+  background-color: var(--color-area);
   transition: .3s;
 }
 .btn:hover {
   background-color: var(--color-hover);
 }
 .btn-primary {
-  background-color: var(--color-primary);
   color: var(--color-black);
+  background-color: var(--color-primary);
 }
 .btn-primary:hover {
-  background-color: var(--color-hover);
   color: var(--color-white);
+  background-color: var(--color-hover);
 }
 
 /* Loading */
@@ -75,10 +75,10 @@ body {
   margin-bottom: 40px;
 }
 .headline h1 {
+  margin-bottom: 40px;
   font-family: "Oswald", sans-serif;
   font-size: 80px;
   line-height: 1;
-  margin-bottom: 40px;
 }
 .headline h1 span {
   color: var(--color-primary);
@@ -97,11 +97,11 @@ body {
   flex-grow: 1;
   height: 50px;
   padding: 0 20px;
+  font-size: 14px;
+  color: var(--color-white);
   border-radius: 4px;
   border: none;
   outline: none;
-  font-size: 14px;
-  color: var(--color-white);
   background-color: var(--color-area);
 }
 .search input::placeholder {
@@ -150,14 +150,14 @@ body {
   border: 6px solid var(--color-primary);
 }
 .movies .movie .info {
-  width: 100%;
-  padding: 14px;
-  box-sizing: border-box;
-  font-size: 14px;
-  text-align: center;
   position: absolute;
   left: 0;
   bottom: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px;
+  font-size: 14px;
+  text-align: center;
   background-color: rgba(14, 17, 27, .3);
   backdrop-filter: blur(10px);
 }
@@ -177,4 +177,43 @@ body {
 }
 .view-more.hide {
   display: none;
+}
+
+/* Movie Details */
+.the-movie {
+  display: flex;
+  gap: 60px;
+  color: var(--color-white-50);
+}
+.the-movie .poster {
+  flex-shrink: 0;
+  --width: 500px;
+  width: var(--width);
+  height: calc(var(--width) * 3 / 2);
+  border-radius: 10px;
+  background-size: cover;
+  background-color: var(--color-area);
+}
+.the-movie .specs {
+  flex-grow: 1;
+}
+.the-movie .title {
+  margin-bottom: 30px;
+  font-family: "Oswald", sans-serif;
+  font-size: 70px;
+  line-height: 1;
+  color: var(--color-white);
+}
+.the-movie .labels {
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+.the-movie .plot {
+  
+}
+.the-movie h3 {
+  margin: 24px 0 6px;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  color: var(--color-white);
 }
