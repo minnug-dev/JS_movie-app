@@ -1,8 +1,16 @@
 import { Component } from '../core/heropy'
+import { SimpleMovie } from '../store/movie'
+
+interface Props {
+  [key: string]: unknown
+  movie: SimpleMovie
+}
 
 export default class MovieItem extends Component {
+  public props!: Props
+
   // MovieItem이 생성자 함수로 호출될 때, 부모(Compoenet)로부터 영화 정보를 받아옴
-  constructor(props) {
+  constructor(props: Props) {
     super({
       props,
       tagName: 'a'
